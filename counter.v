@@ -6,7 +6,8 @@ module counter
     output wire [3:0] count
 );
 
-always@(posedge clock, negedge resetn) begin
+// always@(posedge clock, negedge resetn) begin
+always@(posedge clock) begin
     if(!resetn) begin
         count <= 4'h0;
     end 
